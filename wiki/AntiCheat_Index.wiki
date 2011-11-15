@@ -91,6 +91,7 @@ native ACfix_PlayerMoney(playerid);
 This is the money code, you won't need them because all money functions in your gamemode are automatically replaced with these ones.
 The ACfix_PlayerMoney native is used internally by the plugin to sychronise the client and server money, but you can use it manually.
 
+ActionOnMoneyCheat tells the pluginm what to do if money cheat is detected - call the callback "public AC_OnCheatDetected" or reset the money to the server side money. 
 
 ==== SpeedHack ====
 <code language="PAWN">
