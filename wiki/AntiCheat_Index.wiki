@@ -11,12 +11,17 @@ It is as easy as including the include and recompiling your script, but for usab
 This are the standart definitions you can use in your script.
 <code language="PAWN">
 #define AC_ACTION_ONMONEY_REPORT   	(0) //ACset_ActionOnMoneyCheat
+
 #define AC_ACTION_ONMONEY_RESET    	(1) //ACset_ActionOnMoneyCheat
 
 #define AC_DETECTED_DISABLED_WEAPON (0) //used in AC_OnCheatDetected
+
 #define AC_DETECTED_JETPACK 		(1) //used in AC_OnCheatDetected
+
 #define AC_DETECTED_MONEY   		(2) //used in AC_OnCheatDetected
+
 #define AC_DETECTED_SPAWNED_WEAPON  (3) //used in AC_OnCheatDetected
+
 #define AC_DETECTED_SPEEDHACK		(4) //used in AC_OnCheatDetected
 </code>
 
