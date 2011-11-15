@@ -107,3 +107,13 @@ native AC_AddPlayerClass(modelid, Float:spawn_x, Float:spawn_y, Float:spawn_z, F
 native AC_AddPlayerClassEx(teamid, modelid, Float:spawn_x, Float:spawn_y, Float:spawn_z, Float:z_angle, weapon1, weapon1_ammo, weapon2, weapon2_ammo, weapon3, weapon3_ammo);
 </code>
 These are internally used by the plugin, this avoids weapon detection bugs.
+
+== CallBack ==
+<code language="PAWN">
+public AC_OnCheatDetected(playerid,cheat_type,ac_extra)
+{
+
+}
+</code>
+This is the callback that gets called when any cheat is detected,
+the cheat_types are defined in the definitions and th as_extra parameter is for small things like, when weapon cheat is detected it reports the weaponid, if speedhack the vehicleid and if money the amount it had been raised/lowered.
