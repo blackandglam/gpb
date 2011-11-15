@@ -20,6 +20,8 @@ This are the standart definitions you can use in your script.
 #define AC_DETECTED_SPEEDHACK		(4) //used in AC_OnCheatDetected
 </code>
 
+
+
 == Parameters Used In AntiCheat ==
 ||Parameter||Type||Description||
 ||ac_ticks||Integer||The interval between each plugin 'update'||
@@ -32,6 +34,8 @@ This are the standart definitions you can use in your script.
 ||ac_action||Integer||Action for ACset_ActionOnMoneyCheat||
 ||amount||Integer||amount of money||
 
+
+
 == Functions ==
 
 <code language="PAWN">
@@ -40,6 +44,8 @@ native ACset_UpdateDelay(ac_ticks);
 </code>
 These functions get/set the interval of the plugin anti-cheat check.
 
+
+
 <code language="PAWN">
 native ACget_JetpackCheck();
 native ACset_JetpackCheck(ac_enable = 1);
@@ -47,6 +53,8 @@ native ACget_JetpackAllowed(playerid = 0);
 native ACset_JetpackAllowed(ac_allowed = 1,playerid = (-1));
 </code>
 With these natives you can control the allowance of jetpacks.
+
+
 
 <code language="PAWN">
 native ACget_WeaponCheck();
@@ -62,6 +70,8 @@ native ACget_PlayerWeapon(playerid);
 </code>
 This is the weapon code, you won't need them because all weapon functions in your gamemode are automatically replaced with these ones.
 
+
+
 <code language="PAWN">
 native ACset_MoneyCheck(ac_enable = 1);
 native ACget_MoneyCheck();
@@ -76,11 +86,15 @@ native ACfix_PlayerMoney(playerid);
 This is the money code, you won't need them because all money functions in your gamemode are automatically replaced with these ones.
 The ACfix_PlayerMoney native is used internally by the plugin to sychronise the client and server money, but you can use it manually.
 
+
+
 <code language="PAWN">
 native ACget_SpeedCheck();
 native ACset_SpeedCheck(ac_enable = 1);
 </code>
 With these natives you can control the anti-speedhack.
+
+
 
 <code language="PAWN">
 native AC_AddPlayerClass(modelid, Float:spawn_x, Float:spawn_y, Float:spawn_z, Float:z_angle, weapon1, weapon1_ammo, weapon2, weapon2_ammo, weapon3, weapon3_ammo);
