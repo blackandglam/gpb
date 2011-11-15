@@ -37,7 +37,7 @@ This are the standart definitions you can use in your script.
 
 
 == Functions ==
-
+==== UpdateDelay ====
 <code language="PAWN">
 native ACget_UpdateDelay();
 native ACset_UpdateDelay(ac_ticks);
@@ -45,7 +45,7 @@ native ACset_UpdateDelay(ac_ticks);
 These functions get/set the interval of the plugin anti-cheat check.
 
 
-
+==== Jetpack ====
 <code language="PAWN">
 native ACget_JetpackCheck();
 native ACset_JetpackCheck(ac_enable = 1);
@@ -55,7 +55,7 @@ native ACset_JetpackAllowed(ac_allowed = 1,playerid = (-1));
 With these natives you can control the allowance of jetpacks.
 
 
-
+==== Weapons ====
 <code language="PAWN">
 native ACget_WeaponCheck();
 native ACset_WeaponCheck(ac_enable = 1);
@@ -71,7 +71,7 @@ native ACget_PlayerWeapon(playerid);
 This is the weapon code, you won't need them because all weapon functions in your gamemode are automatically replaced with these ones.
 
 
-
+==== Money ====
 <code language="PAWN">
 native ACset_MoneyCheck(ac_enable = 1);
 native ACget_MoneyCheck();
@@ -87,7 +87,7 @@ This is the money code, you won't need them because all money functions in your 
 The ACfix_PlayerMoney native is used internally by the plugin to sychronise the client and server money, but you can use it manually.
 
 
-
+==== SpeedHack ====
 <code language="PAWN">
 native ACget_SpeedCheck();
 native ACset_SpeedCheck(ac_enable = 1);
@@ -95,7 +95,7 @@ native ACset_SpeedCheck(ac_enable = 1);
 With these natives you can control the anti-speedhack.
 
 
-
+==== Misc ====
 <code language="PAWN">
 native AC_AddPlayerClass(modelid, Float:spawn_x, Float:spawn_y, Float:spawn_z, Float:z_angle, weapon1, weapon1_ammo, weapon2, weapon2_ammo, weapon3, weapon3_ammo);
 native AC_AddPlayerClassEx(teamid, modelid, Float:spawn_x, Float:spawn_y, Float:spawn_z, Float:z_angle, weapon1, weapon1_ammo, weapon2, weapon2_ammo, weapon3, weapon3_ammo);
