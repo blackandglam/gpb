@@ -96,6 +96,13 @@ public OnFilterScriptInit()
 	}
 	end = tickcount();
 	printf("Total time taken for 'STR_DEF' = %d ms | 1x = %.5f ms",end-now,(float(end)-float(now))/10000.0);
+	now = tickcount();
+	for(new i = 0; i < 10000; ++i)
+	{
+	    sprintf("XX||XX");
+	}
+	end = tickcount();
+	printf("Total time taken for 'Just SPRINTF' = %d ms | 1x = %.5f ms",end-now,(float(end)-float(now))/10000.0);
 
 	return 1;
 }
@@ -112,9 +119,10 @@ PL: RQFGQBFXLWPBBEBQYAIRRHQUCYXJUDXIHUSOIUYXXEZUPPIHHCIPADOOYXPRVZJYJNZHNFGOTZYR
 EN: RQFGQBFXLWPBBEBQYAIRRHQUCYXJUDXIHUSOIUYXXEZUPPIHHCIPADOOYXPRVZJYJNZHNFGOTZYRDTPLKGRHSAGSSWORIQSMOJPRGNZSNWHWQVZATWCOFFBIELRFVRZYWSRTCBYVNEMLRZKKZNLIFOFOWVGVRURAHTRKTECOEWKUEHTXFREJZEBXZDWDQJAXILBGTFEVJEHPLANOTLMNPPCFCCKNATHPTOSHSPKPSZUDFLMZFTGCNQPCRTYQPKZCSSTFSAGBDVKCQCVGVGIAKAIWQNZYKLGSGMNIYHYRACJTALRTOXDTLYJPRXWTYVQPLERZTWKDFLUNNZEWXYAAGHJZHXZDRRKNXXDKZUMFJPLSIIKNEUDDNDPMD
 
 
-Total time taken for 'TranslateTextRet PL' = 151 ms | 1x = 0.01520 ms
-Total time taken for 'TranslateTextRet EN' = 145 ms | 1x = 0.01439 ms
-Total time taken for 'TranslateText PL' = 141 ms | 1x = 0.01360 ms
-Total time taken for 'TranslateText EN' = 150 ms | 1x = 0.01520 ms
-Total time taken for 'STR_DEF' = 51 ms | 1x = 0.00480 ms
+Total time taken for 'TranslateTextRet PL' = 143 ms | 1x = 0.01439 ms
+Total time taken for 'TranslateTextRet EN' = 147 ms | 1x = 0.01520 ms
+Total time taken for 'TranslateText PL' = 143 ms | 1x = 0.01360 ms
+Total time taken for 'TranslateText EN' = 147 ms | 1x = 0.01520 ms
+Total time taken for 'STR_DEF' = 44 ms | 1x = 0.00400 ms
+Total time taken for 'Just SPRINTF' = 31 ms | 1x = 0.00319 ms
 }}}
