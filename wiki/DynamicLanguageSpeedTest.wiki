@@ -1,4 +1,5 @@
 #summary Speed Test of dynamic language library
+#labels Featured
 
 {{{
 //////////////////////////////////////////////////////////
