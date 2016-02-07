@@ -1,0 +1,58 @@
+# OnPlayerDriftEnd #
+
+The OnPlayerDriftEnd callback is called when a player did not resume his drift or was canceled.
+
+## The Code ##
+```PAWN
+
+forward OnPlayerDriftEnd(playerid,value,combo,reason);```
+
+## Syntax ##
+|Parameter|Type|Description|
+|:--------|:---|:----------|
+|playerid |Integer|The playerid who ended his drift|
+|value    |Integer|The amount of points|
+|combo    |Integer|The combo (time how long he drifts in ticks to be precise)|
+|reason   |Integer|The reason why the drift was ended|
+
+|Returns|This callback does not return a specific value|
+|:------|:---------------------------------------------|
+
+
+## Ending Reasons ##
+
+|Reason Identifier|Reason Macro|Description|
+|:----------------|:-----------|:----------|
+|0                |DRIFT\_REASON\_TIME\_EXPIRE|The time to resume the drift has expired|
+|1                |DRIFT\_REASON\_CAR\_DAMAGED|The car has been to much damaged|
+|2                |DRIFT\_REASON\_PLAYER\_EXIT\_VEHICLE|The player exited the vehicle|
+
+## Usage ##
+
+```
+new string[128];
+public OnPlayerDriftEnd(playerid,value,combo,reason)
+{
+	if(reason == DRIFT_REASON_TIME_EXPIRE)
+	{
+		format(string,128,"You ended your drift because you time has expired to resume it! Points: %d, combo %d",value,combo);
+	}
+	else
+	if(reason == DRIFT_REASON_CAR_DAMAGED)
+	{
+		format(string,128,"You ended your drift because you you damaged your car too much! Points: %d, combo %d",value,combo);
+	}
+	else
+	if(reason == DRIFT_REASON_PLAYER_EXIT_VEHICLE)
+	{
+		format(string,128,"You ended your drift because you you exited your vehicle! Points: %d, combo %d",value,combo);
+	}
+	else
+	{
+		format(string,128,"What the hell did you do to end this drift ?! Points: %d, combo %d",value,combo);
+
+	}
+	GameTextForPlayer(playerid,string,200,2);
+	return 1;
+}
+```

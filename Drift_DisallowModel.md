@@ -1,0 +1,28 @@
+# [Drift\_DisallowModel](Drift_DisallowModel.md) #
+
+With [Drift\_DisallowModel](Drift_DisallowModel.md) you can disable a vehicle model to drift (eg 425 which is a hunter).
+
+## The Code ##
+```PAWN
+
+native [Drift_DisallowModel](modelid);```
+
+## Syntax ##
+|Parameter|Type|Description|
+|:--------|:---|:----------|
+|modelid  |Integer|The vehicle model to disable (from 400 to 611)|
+
+|Returns|This function returns 1 on success and 0 on failure|
+|:------|:--------------------------------------------------|
+
+## Usage ##
+
+```PAWN
+
+public OnFilterScriptInit()
+{
+[Drift_AllowModel](432);
+//disallows the vehicle model with id 432 (rhino) to drift.
+return 1;
+}
+```

@@ -1,0 +1,35 @@
+# DriftSet\_MinimalSpeed #
+
+With DriftSet\_MinimalSpeed you can set the minimal needed speed for a drift (in km/h).
+
+## The Code ##
+```PAWN
+
+native DriftSet_MinimalSpeed(Float:MinimalSpeed,playerid = (-1));```
+
+## Syntax ##
+|Parameter|Type|Description|
+|:--------|:---|:----------|
+|MinimalSpeed|Float|The amount of speed in km/h|
+|playerid |Integer|For what playerid to set, if -1 is specified the MinimalSpeed is applied for all players|
+
+|Returns|This function does not return a specific value|
+|:------|:---------------------------------------------|
+
+## Usage ##
+
+```PAWN
+
+public OnFilterScriptInit()
+{
+DriftSet_MinimalSpeed(15.0);
+//Above code will set the minimal drifting
+//speed for all players to 15.0 kilometers per hour
+
+DriftSet_MinimalSpeed(38.7,33);
+//Above code will set the minimal drifting
+//speed for player with id 33 to 38.7 kilometers per hour
+
+return 1;
+}
+```

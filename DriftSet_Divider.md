@@ -1,0 +1,52 @@
+# DriftSet\_Divider #
+
+With DriftSet\_Divider you can set the points divider  for OnPlayerDriftUpdate and OnPlayerDriftEnd
+
+this is to avoid huge numbers.
+
+## The Code ##
+```PAWN
+
+native DriftSet_Divider(divider,playerid = (-1));```
+
+## Syntax ##
+|Parameter|Type|Description|
+|:--------|:---|:----------|
+|divider  |Integer|The dividing factor of points|
+|playerid |Integer|The player to set it for, -1 means for all players|
+
+|Returns|This function does not return a specific value|
+|:------|:---------------------------------------------|
+
+## Usage ##
+
+```PAWN
+
+public OnFilterScriptInit()
+{
+DriftSet_Divider(10);
+//The above code will set the divider to 10
+//for all players
+DriftSet_Divider(100,88);
+//The above code will set the divider to 100
+//for playerid 88
+return 1;
+}
+
+//lets say OnPlayerDriftUpdate gets called
+//with value (points) of 250000
+
+//a) when drift divider is set to 250
+public OnPlayerDriftUpdate(playerid,value,combo,flagid,Float:distance,Float:speed)
+{
+printf("%d",value);// will print "1000"
+return 1;
+}
+
+//b) when drift divider is set to 100
+public OnPlayerDriftUpdate(playerid,value,combo,flagid,Float:distance,Float:speed)
+{
+printf("%d",value);// will print "2500"
+return 1;
+}
+```

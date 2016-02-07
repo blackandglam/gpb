@@ -1,0 +1,40 @@
+# OnPlayerDriftUpdate #
+
+The OnPlayerDriftUpdate callback is called when a player meets all requirements`*` to (resume a) drift.
+
+## The Code ##
+```PAWN
+
+forward OnPlayerDriftUpdate(playerid,value,combo,flagid,Float:distance,Float:speed);```
+
+## Syntax ##
+|Parameter|Type|Description|
+|:--------|:---|:----------|
+|playerid |Integer|The playerid who is drifting|
+|value    |Integer|The amount of points|
+|combo    |Integer|The combo (time how long he drifts in ticks to be precise)|
+|flagid   |Integer|The lowest flagid & closest flag within 10 meters, gives the id of the flag |
+|distance |Float|The distance to flagid|
+|speed    |Float|The speed of the player|
+
+|Returns|This callback does not return a specific value|
+|:------|:---------------------------------------------|
+
+## Usage ##
+
+```PAWN
+
+new string[128];
+public OnPlayerDriftUpdate(playerid,value,combo,flagid,Float:distance,Float:speed)
+{
+format(string,128,"Drift! Points: %d, combo %d, flagid %d, distance %.2f, speed %.2f",value,combo,flagid,distance,speed);
+GameTextForPlayer(playerid,string,200,2);
+return 1;
+}
+```
+
+`*` Please see:
+
+DriftSet\_MinimalAngle
+
+DriftSet\_MinimalSpeed
